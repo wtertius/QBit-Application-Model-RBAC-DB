@@ -1,12 +1,14 @@
-Source: libqbit-application-model-rbac-db-perl
+Source: libtertiusqbit-application-model-rbac-db-perl
 Section: perl
 Priority: extra
-Maintainer: Sergei Svistunov <sergei-svistunov@yandex.ru>
-Build-Depends: debhelper (>= 8.0.0), perl, libqbit-perl, libqbit-application-perl, libqbit-application-model-db-perl
+Maintainer: Dmitry Lukiyanchuk <wtertius@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), perl, libtertiusqbit-perl, libtertiusqbit-application-perl, libtertiusqbit-application-model-db-perl
 Standards-Version: 3.9.4
 
-Package: libqbit-application-model-rbac-db-perl
+Package: libtertiusqbit-application-model-rbac-db-perl
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, perl, libqbit-perl, libqbit-application-perl, libqbit-application-model-db-perl
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, perl, libtertiusqbit-perl, libtertiusqbit-application-perl, libtertiusqbit-application-model-db-perl
+Conflicts: libqbit-application-model-rbac-db-perl
+Replaces: libqbit-application-model-rbac-db-perl
 Description: RBAC DB realization.
  RBAC DB realization. Get and store roles and rights into DB.
