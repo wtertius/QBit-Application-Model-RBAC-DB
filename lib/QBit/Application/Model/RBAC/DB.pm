@@ -36,9 +36,15 @@ sub set_roles_rights {
 sub set_user_role {
     my ($self, $user_id, $role_id) = @_;
 
+    $self->set_user_roles($user_id, [$role_id]);
+}
+
+sub set_user_roles {
+    my ($self, $user_id, $role_ids) = @_;
+
     throw Exception::Denied unless $self->check_rights('rbac_user_role_set');
 
-    $self->db->user_role->replace({user_id => $user_id, role_id => $role_id});
+    $self->db->user_role->replace_multi([map {{user_id => $user_id, role_id => $_}} @$role_ids]);
 }
 
 sub get_roles_rights {
