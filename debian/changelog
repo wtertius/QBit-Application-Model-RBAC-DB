@@ -1,3 +1,9 @@
+libtertiusqbit-application-model-rbac-db-perl (0.003) raring; urgency=low
+
+  * Allow to set multiple roles at one request to DB.
+
+ -- Dmitry Lukiyanchuk <tertius@yandex-team.ru>  Fri, 26 Jun 2015 16:29:14 +0300
+
 libtertiusqbit-application-model-rbac-db-perl (0.002) raring; urgency=low
 
   * Rename debian package
